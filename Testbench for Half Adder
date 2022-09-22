@@ -1,0 +1,14 @@
+module half_adder;
+reg A, B;
+wire S, Cout;
+integer i;
+begin
+{A, B} <= 2'b00;
+for(i=1; i<5; i++)
+begin
+$monitor($time, "\tA=%b \tB=%b \tCout=%b", A, B, S, Cout);
+#5{A, B} <= $random%8;
+end
+#45 $finish;
+end 
+endmodule
