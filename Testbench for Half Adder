@@ -2,6 +2,8 @@ module half_adder;
 reg A, B;
 wire S, Cout;
 integer i;
+half_adder HA(.A(A), .B(B), .S(S), .Cout(Cout));
+initial
 begin
 {A, B} <= 2'b00;
 for(i=1; i<5; i++)
